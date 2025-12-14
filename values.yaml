@@ -742,7 +742,7 @@ controller:
   # Additional replicas will cause sharding of managed clusters across number of replicas.
   ## With dynamic cluster distribution turned on, sharding of the clusters will gracefully
   ## rebalance if the number of replica's changes or one becomes unhealthy. (alpha)
-  replicas: 2
+  replicas: 1
 
   # -- Enable dynamic cluster distribution (alpha)
   # Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/dynamic-cluster-distribution
@@ -1723,7 +1723,7 @@ redis:
 # Ref: https://github.com/DandyDeveloper/charts/blob/master/charts/redis-ha/values.yaml
 redis-ha:
   # -- Enables the Redis HA subchart and disables the custom Redis single node deployment
-  enabled: true
+  enabled: false
   ## Redis image
   image:
     # -- Redis repository
@@ -1924,7 +1924,7 @@ server:
   name: server
 
   # -- The number of server pods to run
-  replicas: 2
+  replicas: 1
 
   # -- Runtime class name for the Argo CD server
   # @default -- `""` (defaults to global.runtimeClassName)
@@ -2707,7 +2707,7 @@ repoServer:
   name: repo-server
 
   # -- The number of repo server pods to run
-  replicas: 2
+  replicas: 1
 
   # -- Runtime class name for the repo server
   # @default -- `""` (defaults to global.runtimeClassName)
@@ -3122,7 +3122,7 @@ applicationSet:
   name: applicationset-controller
 
   # -- The number of ApplicationSet controller pods to run
-  replicas: 2
+  replicas: 1
 
   # -- Runtime class name for the ApplicationSet controller
   # @default -- `""` (defaults to global.runtimeClassName)
